@@ -12,6 +12,5 @@ export class AppComponent {
   constructor(
     protected api: ApiService
   ) {
-   this.api.username;
   }
 }
