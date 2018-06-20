@@ -19,8 +19,9 @@ class User extends Model implements
      *
      * @var array
      */
+     //fillable définitions des champs du model
     protected $fillable = [
-        'name', 'email',
+        'created_at', 'last_name', 'first_name', 'renter', 'partner', 'update_at', 'email', 'id_address', 'id_location', 'id_picture'
     ];
 
     /**
@@ -31,4 +32,6 @@ class User extends Model implements
     protected $hidden = [
         'password',
     ];
+
+  //  public function toJson($option = 0);
 }

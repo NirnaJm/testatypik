@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../shared/service/user.service';
 import {User} from '../shared/model/User';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,23 +10,26 @@ import {User} from '../shared/model/User';
 })
 export class LoginComponent implements OnInit {
 
-  user:User = null;
+  //user:User = null;
   login:string;
   password:string;
 
 
   constructor(
-    protected userService:UserService
+    protected userService:UserService,
+    protected router:Router
   ) {
   }
 
   ngOnInit() {
-    this.userService.currentUser.subscribe(user => this.user = user);
+
   }
 
 
   onSubmit() {
-    let res:boolean = this.userService.login(this.login, this.password);
-    console.log(res);
-  }
+    this.userService.login(this.login, this.password).subscribe((user:User) => {
+    this.router.navigate(['/home']);
+  }, err =>{
+    console.log('error pas co');
+  });
 }

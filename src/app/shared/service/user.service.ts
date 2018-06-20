@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {User} from '../model/User';
 import {ApiService} from './api.service';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class UserService {
@@ -12,18 +13,19 @@ export class UserService {
 
   constructor(protected api:ApiService) { }
 
-  login(login:string, password:string):boolean {
-    let user:User = this.api.post('login', {login :login,password:password}) as User;
+  login(login:string, password:string):Observable<User> {
+  return this.api.post('login', {email :login,password:password}).map(res =>{
+  let user:User =  res as User;
+  this._currentUser.next(user);
+  return user;
+  });
+}
 
-    if (user) {
-      this._currentUser.next(user);
-      return true;
-    }
+  logout(){
+    this._currentUser.next(null);
 
-    return false;
-    // '1' => cast number : 1
-    // false => cast number
-    // 'vhjkrdgkjhb' => boolean ?
   }
+
+
 
 }

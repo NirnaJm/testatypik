@@ -11,6 +11,9 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get('/','HomeController@index');
+
+//Pour tester api dans le navigateur méthode GET
+//$app->get('/login','UserController@login');
+
+$app->post('/login','UserController@login');
