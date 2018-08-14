@@ -8,6 +8,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {ApiService} from './shared/service/api.service';
 import {UserService} from './shared/service/user.service';
+import { AlertModule } from 'ngx-bootstrap';
 
 import  {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
@@ -23,9 +24,10 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     HomeComponent,
+
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpClientModule
+    BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpClientModule, AlertModule.forRoot()
   ],
   providers: [
     ApiService,

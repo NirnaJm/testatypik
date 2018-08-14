@@ -3,6 +3,7 @@ import {User} from '../model/User';
 import {ApiService} from './api.service';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class UserService {
