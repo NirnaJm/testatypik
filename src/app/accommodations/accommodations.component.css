@@ -1,0 +1,7 @@
+.imgCarrousel{
+  width: 203px;
+  height: 134px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  margin: 18px;
+}

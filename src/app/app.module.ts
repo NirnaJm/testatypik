@@ -16,11 +16,16 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DetailsHomeComponent } from './details-home/details-home.component';
 import { HeaderComponent } from './header/header.component';
+import { AccommodationsComponent } from './accommodations/accommodations.component';
+import { LocationComponent } from './location/location.component';
 
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'navbar', component: NavbarComponent},
+  {path: 'accommodations', component: AccommodationsComponent},
+  {path: 'location', component: LocationComponent}
 ];
 
 @NgModule({
@@ -32,6 +37,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     DetailsHomeComponent,
     HeaderComponent,
+    AccommodationsComponent,
+    LocationComponent,
 
   ],
   imports: [
