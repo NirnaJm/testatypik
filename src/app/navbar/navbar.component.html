@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" routerLink = "">AtypikHouse</a>
   <ul class="nav justify-content-end">
@@ -11,7 +12,7 @@
       <a class="nav-link" routerLink = "accommodations">Locations</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Activités</a>
+      <a class="nav-link"routerLink = "activities">Activités</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Le projet Atypik House</a>
@@ -19,7 +20,9 @@
     <li class="nav-item">
       <a class="nav-link" href="#">Devenir hôte</a>
     </li>
-    <li class="nav-item">
-    </li>
+  <!--
+      <li class="nav-item" *ngIf="user">Bonjour {{user.first_name}} {{user.last_name}}
+    </li> -->
   </ul>
 </nav>
+<app-home></app-home>

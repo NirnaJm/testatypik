@@ -18,6 +18,7 @@ import { DetailsHomeComponent } from './details-home/details-home.component';
 import { HeaderComponent } from './header/header.component';
 import { AccommodationsComponent } from './accommodations/accommodations.component';
 import { LocationComponent } from './location/location.component';
+import { ActivitiesComponent } from './activities/activities.component';
 
 
 const appRoutes: Routes = [
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'navbar', component: NavbarComponent},
   {path: 'accommodations', component: AccommodationsComponent},
-  {path: 'location', component: LocationComponent}
+  {path: 'location', component: LocationComponent},
+  {path: 'activities', component: ActivitiesComponent}
 ];
 
 @NgModule({
@@ -39,6 +41,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     AccommodationsComponent,
     LocationComponent,
+    ActivitiesComponent,
 
   ],
   imports: [

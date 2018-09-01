@@ -3,6 +3,7 @@ import {UserService} from '../shared/service/user.service';
 import {User} from '../shared/model/User';
 import {Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.userService.login(this.login, this.password).subscribe((user:User) => {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/login']);
   }, err =>{
     console.log('error pas co');
   });
