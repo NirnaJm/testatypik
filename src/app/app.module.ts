@@ -12,6 +12,10 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import  {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { DetailsHomeComponent } from './details-home/details-home.component';
+import { HeaderComponent } from './header/header.component';
 
 
 const appRoutes: Routes = [
@@ -24,6 +28,10 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     HomeComponent,
+    FooterComponent,
+    NavbarComponent,
+    DetailsHomeComponent,
+    HeaderComponent,
 
   ],
   imports: [

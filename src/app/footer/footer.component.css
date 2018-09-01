@@ -1,0 +1,32 @@
+.unique-color{
+  background-color: #34CABB;
+  }
+.logofooter{
+  width: 30%;
+  HEIGHT: 30%;
+}
+.linkTxt{
+  color:            white;
+}
+.verticalHr{
+    border-left:    1px solid;
+    height:         25vh;
+    width:          1px;
+    color:          white;
+}
+.Hrblc{
+    border-left:    1px solid;
+    width:          1px;
+    color:          white !important;
+}
+.txt-align-right{
+  text-align: right;
+}
+.mr-p5{
+  margin-right: 0.5rem!important;
+  font-size: 24px;
+  color: white;
+  }
+  .size-f-footer{
+    font-size: 12px;
+  }
